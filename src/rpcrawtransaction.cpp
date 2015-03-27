@@ -144,7 +144,7 @@ Value getrawtransaction(const Array& params, bool fHelp)
             "  ],\n"
             "  \"vout\" : [              (array of json objects)\n"
             "     {\n"
-            "       \"value\" : x.xxx,            (numeric) The value in ltc\n"
+            "       \"value\" : x.xxx,            (numeric) The value in fst\n"
             "       \"n\" : n,                    (numeric) index\n"
             "       \"scriptPubKey\" : {          (json object)\n"
             "         \"asm\" : \"asm\",          (string) the asm\n"
@@ -220,7 +220,7 @@ Value listunspent(const Array& params, bool fHelp)
             "    \"address\" : \"address\",  (string) the fastcoin address\n"
             "    \"account\" : \"account\",  (string) The associated account, or \"\" for the default account\n"
             "    \"scriptPubKey\" : \"key\", (string) the script key\n"
-            "    \"amount\" : x.xxx,         (numeric) the transaction amount in ltc\n"
+            "    \"amount\" : x.xxx,         (numeric) the transaction amount in fst\n"
             "    \"confirmations\" : n       (numeric) The number of confirmations\n"
             "  }\n"
             "  ,...\n"
@@ -228,8 +228,8 @@ Value listunspent(const Array& params, bool fHelp)
 
             "\nExamples\n"
             + HelpExampleCli("listunspent", "")
-            + HelpExampleCli("listunspent", "6 9999999 \"[\\\"Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2\\\",\\\"LbhhnRHHVfP1eUJp1tDNiyeeVsNhFN9Fcw\\\"]\"")
-            + HelpExampleRpc("listunspent", "6, 9999999 \"[\\\"Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2\\\",\\\"LbhhnRHHVfP1eUJp1tDNiyeeVsNhFN9Fcw\\\"]\"")
+            + HelpExampleCli("listunspent", "4 9999999 \"[\\\"fpQXGrv3ChSdG9iurnP58wUUmZpqJXRgnN\\\",\\\"fpQXGrv3ChSdG9iurnP58wUUmZpqJXRgnN\\\"]\"")
+            + HelpExampleRpc("listunspent", "4, 9999999 \"[\\\"fpQXGrv3ChSdG9iurnP58wUUmZpqJXRgnN\\\",\\\"fpQXGrv3ChSdG9iurnP58wUUmZpqJXRgnN\\\"]\"")
         );
 
     RPCTypeCheck(params, list_of(int_type)(int_type)(array_type));
@@ -324,7 +324,7 @@ Value createrawtransaction(const Array& params, bool fHelp)
             "     ]\n"
             "2. \"addresses\"           (string, required) a json object with addresses as keys and amounts as values\n"
             "    {\n"
-            "      \"address\": x.xxx   (numeric, required) The key is the fastcoin address, the value is the ltc amount\n"
+            "      \"address\": x.xxx   (numeric, required) The key is the fastcoin address, the value is the fst amount\n"
             "      ,...\n"
             "    }\n"
 
@@ -408,7 +408,7 @@ Value decoderawtransaction(const Array& params, bool fHelp)
             "  ],\n"
             "  \"vout\" : [             (array of json objects)\n"
             "     {\n"
-            "       \"value\" : x.xxx,            (numeric) The value in ltc\n"
+            "       \"value\" : x.xxx,            (numeric) The value in fst\n"
             "       \"n\" : n,                    (numeric) index\n"
             "       \"scriptPubKey\" : {          (json object)\n"
             "         \"asm\" : \"asm\",          (string) the asm\n"
@@ -416,7 +416,7 @@ Value decoderawtransaction(const Array& params, bool fHelp)
             "         \"reqSigs\" : n,            (numeric) The required sigs\n"
             "         \"type\" : \"pubkeyhash\",  (string) The type, eg 'pubkeyhash'\n"
             "         \"addresses\" : [           (json array of string)\n"
-            "           \"Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2\"   (string) fastcoin address\n"
+            "           \"fpQXGrv3ChSdG9iurnP58wUUmZpqJXRgnN\"   (string) fastcoin address\n"
             "           ,...\n"
             "         ]\n"
             "       }\n"
