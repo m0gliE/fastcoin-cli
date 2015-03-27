@@ -67,6 +67,9 @@ static boost::filesystem::detail::utf8_codecvt_facet utf8;
 
 #if defined(Q_OS_MAC)
 extern double NSAppKitVersionNumber;
+#if !defined(NSAppKitVersionNumber10_8)
+#define NSAppKitVersionNumber10_8 1187
+#endif
 #if !defined(NSAppKitVersionNumber10_9)
 #define NSAppKitVersionNumber10_9 1265
 #endif
@@ -103,7 +106,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a Bitcoin address (e.g. %1)").arg("1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L"));
+    widget->setPlaceholderText(QObject::tr("Enter a Fastcoin address (e.g. %1)").arg("Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2"));
 #endif
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
     widget->setCheckValidator(new BitcoinAddressCheckValidator(parent));
@@ -121,7 +124,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // return if URI is not valid or is no bitcoin: URI
-    if(!uri.isValid() || uri.scheme() != QString("bitcoin"))
+    if(!uri.isValid() || uri.scheme() != QString("fastcoin"))
         return false;
 
     SendCoinsRecipient rv;
@@ -185,9 +188,9 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
     //
     //    Cannot handle this later, because bitcoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("bitcoin://", Qt::CaseInsensitive))
+    if(uri.startsWith("fastcoin://", Qt::CaseInsensitive))
     {
-        uri.replace(0, 10, "bitcoin:");
+        uri.replace(0, 11, "fastcoin:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -195,7 +198,7 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 
 QString formatBitcoinURI(const SendCoinsRecipient &info)
 {
-    QString ret = QString("bitcoin:%1").arg(info.address);
+    QString ret = QString("fastcoin:%1").arg(info.address);
     int paramCount = 0;
 
     if (info.amount)
@@ -383,7 +386,7 @@ void openDebugLogfile()
         QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathDebug)));
 }
 
-void SubstituteFonts()
+void SubstituteFonts(const QString& language)
 {
 #if defined(Q_OS_MAC)
 // Background:
@@ -393,12 +396,28 @@ void SubstituteFonts()
 // If this fallback is not properly loaded, some characters may fail to
 // render correctly.
 //
+// The same thing happened with 10.10. .Helvetica Neue DeskInterface is now default.
+//
 // Solution: If building with the 10.7 SDK or lower and the user's platform
 // is 10.9 or higher at runtime, substitute the correct font. This needs to
 // happen before the QApplication is created.
 #if defined(MAC_OS_X_VERSION_MAX_ALLOWED) && MAC_OS_X_VERSION_MAX_ALLOWED < MAC_OS_X_VERSION_10_8
-    if (floor(NSAppKitVersionNumber) >= NSAppKitVersionNumber10_9)
-        QFont::insertSubstitution(".Lucida Grande UI", "Lucida Grande");
+    if (floor(NSAppKitVersionNumber) > NSAppKitVersionNumber10_8)
+    {
+        if (floor(NSAppKitVersionNumber) <= NSAppKitVersionNumber10_9)
+            /* On a 10.9 - 10.9.x system */
+            QFont::insertSubstitution(".Lucida Grande UI", "Lucida Grande");
+        else
+        {
+            /* 10.10 or later system */
+            if (language == "zh_CN" || language == "zh_TW" || language == "zh_HK") // traditional or simplified Chinese
+              QFont::insertSubstitution(".Helvetica Neue DeskInterface", "Heiti SC");
+            else if (language == "ja") // Japanesee
+              QFont::insertSubstitution(".Helvetica Neue DeskInterface", "Songti SC");
+            else
+              QFont::insertSubstitution(".Helvetica Neue DeskInterface", "Lucida Grande");
+        }
+    }
 #endif
 #endif
 }
@@ -548,7 +567,7 @@ TableViewLastColumnResizingFixer::TableViewLastColumnResizingFixer(QTableView* t
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "Bitcoin.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "Fastcoin.lnk";
 }
 
 bool GetStartOnSystemStartup()
@@ -630,7 +649,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "bitcoin.desktop";
+    return GetAutostartDir() / "fastcoin.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -671,7 +690,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         // Write a bitcoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=Bitcoin\n";
+        optionFile << "Name=Fastcoin\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";

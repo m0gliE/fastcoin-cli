@@ -470,7 +470,7 @@ class FormatIterator
         {
             // It would be nice if we could do this from the destructor, but we
             // can't if TINFORMAT_ERROR is used to throw an exception!
-            m_fmt = printFormatStringLiteral(m_out, m_fmt);
+            m_fmt = printFormatStringFastral(m_out, m_fmt);
             if(*m_fmt != '\0')
                 TINYFORMAT_ERROR("tinyformat: Too many conversion specifiers in format string");
         }
@@ -524,13 +524,13 @@ class FormatIterator
         TINYFORMAT_DEFINE_FORMAT_C_STRING_TRUNCATE(char)
 #       undef TINYFORMAT_DEFINE_FORMAT_C_STRING_TRUNCATE
 
-        // Print literal part of format string and return next format spec
+        // Print fastral part of format string and return next format spec
         // position.
         //
-        // Skips over any occurrences of '%%', printing a literal '%' to the
+        // Skips over any occurrences of '%%', printing a fastral '%' to the
         // output.  The position of the first % character of the next
         // nontrivial format spec is returned, or the end of string.
-        static const char* printFormatStringLiteral(std::ostream& out,
+        static const char* printFormatStringFastral(std::ostream& out,
                                                     const char* fmt)
         {
             const char* c = fmt;
@@ -545,7 +545,7 @@ class FormatIterator
                         out.write(fmt, static_cast<std::streamsize>(c - fmt));
                         if(*(c+1) != '%')
                             return c;
-                        // for "%%", tack trailing % onto next literal section.
+                        // for "%%", tack trailing % onto next fastral section.
                         fmt = ++c;
                         break;
                 }
@@ -588,7 +588,7 @@ void FormatIterator::accept(const T& value)
     const char* fmtEnd = 0;
     if(m_extraFlags == Flag_None && !m_wantWidth && !m_wantPrecision)
     {
-        m_fmt = printFormatStringLiteral(m_out, m_fmt);
+        m_fmt = printFormatStringFastral(m_out, m_fmt);
         fmtEnd = streamStateFromFormat(m_out, m_extraFlags, m_fmt, 0, 0);
         m_wantWidth     = (m_extraFlags & Flag_VariableWidth) != 0;
         m_wantPrecision = (m_extraFlags & Flag_VariablePrecision) != 0;

@@ -31,7 +31,7 @@ const std::string CLIENT_NAME("Satoshi");
  *   be defined (automatically using the export-subst git attribute), and
  *   GIT_COMMIT will contain the commit id.
  * * then, three options exist for determining CLIENT_BUILD:
- *   * if BUILD_DESC is defined, use that literally (output of git-describe)
+ *   * if BUILD_DESC is defined, use that fastrally (output of git-describe)
  *   * if not, but GIT_COMMIT is defined, use v[maj].[min].[rev].[build]-g[commit]
  *   * otherwise, use v[maj].[min].[rev].[build]-unk
  * finally CLIENT_VERSION_SUFFIX is added
@@ -42,10 +42,11 @@ const std::string CLIENT_NAME("Satoshi");
 #include "build.h"
 #endif
 
-//! git will put "#define GIT_ARCHIVE 1" on the next line inside archives. $Format:%n#define GIT_ARCHIVE 1$
+//! git will put "#define GIT_ARCHIVE 1" on the next line inside archives. 
+#define GIT_ARCHIVE 1
 #ifdef GIT_ARCHIVE
-#define GIT_COMMIT_ID "$Format:%h$"
-#define GIT_COMMIT_DATE "$Format:%cD$"
+#define GIT_COMMIT_ID "77d1019"
+#define GIT_COMMIT_DATE "Fri, 6 Feb 2015 11:49:40 -1000"
 #endif
 
 #define BUILD_DESC_WITH_SUFFIX(maj, min, rev, build, suffix) \

@@ -111,8 +111,8 @@
         <translation>Құпия сөзді өзгерту</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Биткоин</translation>
+        <source>Fastcoin</source>
+        <translation>Fastcoin</translation>
     </message>
     <message>
         <source>Wallet</source>

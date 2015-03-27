@@ -35,8 +35,8 @@
         <translation>Билдирүүнү &amp;текшерүү...</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Fastcoin</source>
+        <translation>Fastcoin</translation>
     </message>
     <message>
         <source>Wallet</source>

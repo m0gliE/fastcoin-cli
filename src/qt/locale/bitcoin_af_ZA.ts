@@ -147,8 +147,8 @@
         <translation>&amp;Opsies</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Fastcoin</source>
+        <translation>Fastcoin</translation>
     </message>
     <message>
         <source>Wallet</source>

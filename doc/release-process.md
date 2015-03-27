@@ -1,11 +1,6 @@
 Release Process
 ====================
 
-* update translations (ping wumpus, Diapolo or tcatm on IRC)
-* see https://github.com/bitcoin/bitcoin/blob/master/doc/translation_process.md#syncing-with-transifex
-
-* * *
-
 ###update (commit) version in sources
 
 	contrib/verifysfbinaries/verify.sh
@@ -29,11 +24,11 @@ Release Process
 
 ###perform gitian builds
 
- From a directory containing the bitcoin source, gitian-builder and gitian.sigs
+ From a directory containing the fastcoin source, gitian-builder and gitian.sigs.ltc
   
-	export SIGNER=(your gitian key, ie bluematt, sipa, etc)
+	export SIGNER=(your gitian key, ie wtogami, coblee, etc)
 	export VERSION=(new version, e.g. 0.8.0)
-	pushd ./bitcoin
+	pushd ./fastcoin
 	git checkout v${VERSION}
 	popd
 	pushd ./gitian-builder
@@ -54,29 +49,29 @@ Release Process
 
   By default, gitian will fetch source files as needed. For offline builds, they can be fetched ahead of time:
 
-	make -C ../bitcoin/depends download SOURCES_PATH=`pwd`/cache/common
+	make -C ../fastcoin/depends download SOURCES_PATH=`pwd`/cache/common
 
   Only missing files will be fetched, so this is safe to re-run for each build.
 
-###Build Bitcoin Core for Linux, Windows, and OS X:
+###Build Fastcoin Core for Linux, Windows, and OS X:
   
-	./bin/gbuild --commit bitcoin=v${VERSION} ../bitcoin/contrib/gitian-descriptors/gitian-linux.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../bitcoin/contrib/gitian-descriptors/gitian-linux.yml
-	mv build/out/bitcoin-*.tar.gz build/out/src/bitcoin-*.tar.gz ../
-	./bin/gbuild --commit bitcoin=v${VERSION} ../bitcoin/contrib/gitian-descriptors/gitian-win.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-win --destination ../gitian.sigs/ ../bitcoin/contrib/gitian-descriptors/gitian-win.yml
-	mv build/out/bitcoin-*.zip build/out/bitcoin-*.exe ../
-	./bin/gbuild --commit bitcoin=v${VERSION} ../bitcoin/contrib/gitian-descriptors/gitian-osx.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../bitcoin/contrib/gitian-descriptors/gitian-osx.yml
-	mv build/out/bitcoin-*-unsigned.tar.gz inputs/bitcoin-osx-unsigned.tar.gz
-	mv build/out/bitcoin-*.tar.gz build/out/bitcoin-*.dmg ../
+	./bin/gbuild --commit fastcoin=v${VERSION} ../fastcoin/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.ltc/ ../fastcoin/contrib/gitian-descriptors/gitian-linux.yml
+	mv build/out/fastcoin-*.tar.gz build/out/src/fastcoin-*.tar.gz ../
+	./bin/gbuild --commit fastcoin=v${VERSION} ../fastcoin/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-win --destination ../gitian.sigs.ltc/ ../fastcoin/contrib/gitian-descriptors/gitian-win.yml
+	mv build/out/fastcoin-*.zip build/out/fastcoin-*.exe ../
+	./bin/gbuild --commit fastcoin=v${VERSION} ../fastcoin/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.ltc/ ../fastcoin/contrib/gitian-descriptors/gitian-osx.yml
+	mv build/out/fastcoin-*-unsigned.tar.gz inputs/fastcoin-osx-unsigned.tar.gz
+	mv build/out/fastcoin-*.tar.gz build/out/fastcoin-*.dmg ../
 	popd
   Build output expected:
 
-  1. source tarball (bitcoin-${VERSION}.tar.gz)
-  2. linux 32-bit and 64-bit binaries dist tarballs (bitcoin-${VERSION}-linux[32|64].tar.gz)
-  3. windows 32-bit and 64-bit installers and dist zips (bitcoin-${VERSION}-win[32|64]-setup.exe, bitcoin-${VERSION}-win[32|64].zip)
-  4. OSX unsigned installer (bitcoin-${VERSION}-osx-unsigned.dmg)
+  1. source tarball (fastcoin-${VERSION}.tar.gz)
+  2. linux 32-bit and 64-bit binaries dist tarballs (fastcoin-${VERSION}-linux[32|64].tar.gz)
+  3. windows 32-bit and 64-bit installers and dist zips (fastcoin-${VERSION}-win[32|64]-setup.exe, fastcoin-${VERSION}-win[32|64].zip)
+  4. OSX unsigned installer (fastcoin-${VERSION}-osx-unsigned.dmg)
   5. Gitian signatures (in gitian.sigs/${VERSION}-<linux|win|osx-unsigned>/(your gitian key)/
 
 ###Next steps:
@@ -92,17 +87,17 @@ Commit your signature to gitian.sigs:
 	popd
 
   Wait for OSX detached signature:
-	Once the OSX build has 3 matching signatures, Gavin will sign it with the apple App-Store key.
+	Once the OSX build has 3 matching signatures, Warren/Coblee will sign it with the apple App-Store key.
 	He will then upload a detached signature to be combined with the unsigned app to create a signed binary.
 
   Create the signed OSX binary:
 
 	pushd ./gitian-builder
-	# Fetch the signature as instructed by Gavin
+	# Fetch the signature as instructed by Warren/Coblee
 	cp signature.tar.gz inputs/
-	./bin/gbuild -i ../bitcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../bitcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-	mv build/out/bitcoin-osx-signed.dmg ../bitcoin-${VERSION}-osx.dmg
+	./bin/gbuild -i ../fastcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../fastcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+	mv build/out/fastcoin-osx-signed.dmg ../fastcoin-${VERSION}-osx.dmg
 	popd
 
 Commit your signature for the signed OSX binary:
@@ -121,7 +116,7 @@ Commit your signature for the signed OSX binary:
 
     - Code-sign Windows -setup.exe (in a Windows virtual machine using signtool)
 
-  Note: only Gavin has the code-signing keys currently.
+  Note: only Warren/Coblee has the code-signing keys currently.
 
 - Create `SHA256SUMS.asc` for the builds, and GPG-sign it:
 ```bash
@@ -131,28 +126,19 @@ rm SHA256SUMS
 ```
 (the digest algorithm is forced to sha256 to avoid confusion of the `Hash:` header that GPG adds with the SHA256 used for the files)
 
-- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the bitcoin.org server
+- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the fastcoin.org server
 
-- Update bitcoin.org version
-
-  - Make a pull request to add a file named `YYYY-MM-DD-vX.Y.Z.md` with the release notes
-  to https://github.com/bitcoin/bitcoin.org/tree/master/_releases
-   ([Example for 0.9.2.1](https://raw.githubusercontent.com/bitcoin/bitcoin.org/master/_releases/2014-06-19-v0.9.2.1.md)).
-
-  - After the pull request is merged, the website will automatically show the newest version, as well
-    as update the OS download links. Ping Saivann in case anything goes wrong
+- Update fastcoin.org version
 
 - Announce the release:
 
-  - Release sticky on bitcointalk: https://bitcointalk.org/index.php?board=1.0
+  - Release sticky on fastcointalk: https://fastcointalk.org/index.php?board=1.0
 
-  - Bitcoin-development mailing list
+  - fastcoin-development mailing list
 
-  - Update title of #bitcoin on Freenode IRC
+  - Update title of #fastcoin on Freenode IRC
 
-  - Optionally reddit /r/Bitcoin, ... but this will usually sort out itself
-
-- Notify BlueMatt so that he can start building [https://launchpad.net/~bitcoin/+archive/ubuntu/bitcoin](the PPAs)
+  - Optionally reddit /r/fastcoin, ... but this will usually sort out itself
 
 - Add release notes for the new version to the directory `doc/release-notes` in git master
 

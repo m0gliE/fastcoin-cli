@@ -66,12 +66,12 @@
         <translation>S'estan rebent les adreces</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estes són les vostres adreces de Bitcoin per enviar els pagaments. Sempre reviseu l'import i l'adreça del destinatari abans de transferir monedes.</translation>
+        <source>These are your Fastcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estes són les vostres adreces de Fastcoin per enviar els pagaments. Sempre reviseu l'import i l'adreça del destinatari abans de transferir monedes.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estes són les vostres adreces Bitcoin per rebre pagaments. Es recomana utilitzar una adreça nova de recepció per a cada transacció.</translation>
+        <source>These are your Fastcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estes són les vostres adreces Fastcoin per rebre pagaments. Es recomana utilitzar una adreça nova de recepció per a cada transacció.</translation>
     </message>
     <message>
         <source>Copy &amp;Label</source>
@@ -164,8 +164,8 @@
         <translation>Confirma l'encriptació del moneder</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Avís: si encripteu el vostre moneder i perdeu la contrasenya, &lt;b&gt;PERDREU TOTS ELS VOSTRES BITCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FASTCOINS&lt;/b&gt;!</source>
+        <translation>Avís: si encripteu el vostre moneder i perdeu la contrasenya, &lt;b&gt;PERDREU TOTS ELS VOSTRES FASTCOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -188,8 +188,8 @@
         <translation>Introduïu la contrasenya nova al moneder.&lt;br/&gt;Utilitzeu una contrasenya de &lt;b&gt;deu o més caràcters aleatoris&lt;/b&gt;, o &lt;b&gt;vuit o més paraules&lt;/b&gt;.</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin es tancarà ara per acabar el procés d'encriptació. Recordeu que encriptar el moneder no protegeix completament els bitcoins de ser robats per programari maliciós instal·lat a l'ordinador.</translation>
+        <source>Fastcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your fastcoins from being stolen by malware infecting your computer.</source>
+        <translation>Fastcoin es tancarà ara per acabar el procés d'encriptació. Recordeu que encriptar el moneder no protegeix completament els fastcoins de ser robats per programari maliciós instal·lat a l'ordinador.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -295,8 +295,8 @@
         <translation>Obri un &amp;URI...</translation>
     </message>
     <message>
-        <source>Bitcoin Core client</source>
-        <translation>Client del Bitcoin Core</translation>
+        <source>Fastcoin Core client</source>
+        <translation>Client del Fastcoin Core</translation>
     </message>
     <message>
         <source>Importing blocks from disk...</source>
@@ -307,12 +307,12 @@
         <translation>S'estan reindexant els blocs al disc...</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation>Envia monedes a una adreça Bitcoin</translation>
+        <source>Send coins to a Fastcoin address</source>
+        <translation>Envia monedes a una adreça Fastcoin</translation>
     </message>
     <message>
-        <source>Modify configuration options for Bitcoin</source>
-        <translation>Modifica les opcions de configuració per bitcoin</translation>
+        <source>Modify configuration options for Fastcoin</source>
+        <translation>Modifica les opcions de configuració per fastcoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -335,8 +335,8 @@
         <translation>&amp;Verifica el missatge...</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Fastcoin</source>
+        <translation>Fastcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -351,8 +351,8 @@
         <translation>&amp;Rep</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Core</source>
-        <translation>Mostra informació del Bitcoin Core</translation>
+        <source>Show information about Fastcoin Core</source>
+        <translation>Mostra informació del Fastcoin Core</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -367,12 +367,12 @@
         <translation>Encripta les claus privades pertanyents al moneder</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation>Signa el missatges amb la seua adreça de Bitcoin per provar que les poseeixes</translation>
+        <source>Sign messages with your Fastcoin addresses to prove you own them</source>
+        <translation>Signa el missatges amb la seua adreça de Fastcoin per provar que les poseeixes</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation>Verifiqueu els missatges per assegurar-vos que han estat signats amb una adreça Bitcoin específica.</translation>
+        <source>Verify messages to ensure they were signed with specified Fastcoin addresses</source>
+        <translation>Verifiqueu els missatges per assegurar-vos que han estat signats amb una adreça Fastcoin específica.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -391,16 +391,16 @@
         <translation>Barra d'eines de les pestanyes</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Nucli de Bitcoin</translation>
+        <source>Fastcoin Core</source>
+        <translation>Nucli de Fastcoin</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Sol·licita pagaments (genera codis QR i bitcoin: URI)</translation>
+        <source>Request payments (generates QR codes and fastcoin: URIs)</source>
+        <translation>Sol·licita pagaments (genera codis QR i fastcoin: URI)</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Core</source>
-        <translation>&amp;Quant al Bitcoin Core</translation>
+        <source>&amp;About Fastcoin Core</source>
+        <translation>&amp;Quant al Fastcoin Core</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -411,16 +411,16 @@
         <translation>Mostra la llista d'adreces de recepció i etiquetes utilitzades</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Obri una bitcoin: sol·licitud d'URI o pagament</translation>
+        <source>Open a fastcoin: URI or payment request</source>
+        <translation>Obri una fastcoin: sol·licitud d'URI o pagament</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Opcions de la &amp;línia d'ordes</translation>
     </message>
     <message>
-        <source>Show the Bitcoin Core help message to get a list with possible Bitcoin command-line options</source>
-        <translation>Mostra el missatge d'ajuda del Bitcoin Core per obtindre una llista amb les possibles opcions de línia d'ordes de Bitcoin</translation>
+        <source>Show the Fastcoin Core help message to get a list with possible Fastcoin command-line options</source>
+        <translation>Mostra el missatge d'ajuda del Fastcoin Core per obtindre una llista amb les possibles opcions de línia d'ordes de Fastcoin</translation>
     </message>
     <message>
         <source>No block source available...</source>
@@ -748,8 +748,8 @@ Address: %4
         <translation>L'adreça introduïda «%1» ja és present a la llibreta d'adreces.</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin address.</source>
-        <translation>L'adreça introduïda «%1» no és una adreça de Bitcoin vàlida.</translation>
+        <source>The entered address "%1" is not a valid Fastcoin address.</source>
+        <translation>L'adreça introduïda «%1» no és una adreça de Fastcoin vàlida.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -786,8 +786,8 @@ Address: %4
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Nucli de Bitcoin</translation>
+        <source>Fastcoin Core</source>
+        <translation>Nucli de Fastcoin</translation>
     </message>
     <message>
         <source>version</source>
@@ -798,8 +798,8 @@ Address: %4
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About Bitcoin Core</source>
-        <translation>Quant al Bitcoin Core</translation>
+        <source>About Fastcoin Core</source>
+        <translation>Quant al Fastcoin Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -845,16 +845,16 @@ Address: %4
         <translation>Vos donem la benviguda</translation>
     </message>
     <message>
-        <source>Welcome to Bitcoin Core.</source>
-        <translation>Vos donem la benvinguda al Bitcoin Core.</translation>
+        <source>Welcome to Fastcoin Core.</source>
+        <translation>Vos donem la benvinguda al Fastcoin Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Bitcoin Core will store its data.</source>
-        <translation>Atès que és la primera vegada que executeu el programa, podeu triar on emmagatzemarà el Bitcoin Core les dades.</translation>
+        <source>As this is the first time the program is launched, you can choose where Fastcoin Core will store its data.</source>
+        <translation>Atès que és la primera vegada que executeu el programa, podeu triar on emmagatzemarà el Fastcoin Core les dades.</translation>
     </message>
     <message>
-        <source>Bitcoin Core will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>El Bitcoin Core descarregarà i emmagatzemarà una còpia de la cadena de blocs de Bitcoin. Com a mínim s'emmagatzemaran %1 GB de dades en este directori, que seguiran creixent gradualment. També s'hi emmagatzemarà el moneder.</translation>
+        <source>Fastcoin Core will download and store a copy of the Fastcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>El Fastcoin Core descarregarà i emmagatzemarà una còpia de la cadena de blocs de Fastcoin. Com a mínim s'emmagatzemaran %1 GB de dades en este directori, que seguiran creixent gradualment. També s'hi emmagatzemarà el moneder.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -865,8 +865,8 @@ Address: %4
         <translation>Utilitza un directori de dades personalitzat:</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Nucli de Bitcoin</translation>
+        <source>Fastcoin Core</source>
+        <translation>Nucli de Fastcoin</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -911,12 +911,12 @@ Address: %4
         <translation>&amp;Principal</translation>
     </message>
     <message>
-        <source>Automatically start Bitcoin after logging in to the system.</source>
-        <translation>Inicia automàticament el Bitcoin després de l'inici de sessió del sistema.</translation>
+        <source>Automatically start Fastcoin after logging in to the system.</source>
+        <translation>Inicia automàticament el Fastcoin després de l'inici de sessió del sistema.</translation>
     </message>
     <message>
-        <source>&amp;Start Bitcoin on system login</source>
-        <translation>&amp;Inicia el Bitcoin a l'inici de sessió del sistema.</translation>
+        <source>&amp;Start Fastcoin on system login</source>
+        <translation>&amp;Inicia el Fastcoin a l'inici de sessió del sistema.</translation>
     </message>
     <message>
         <source>Size of &amp;database cache</source>
@@ -984,15 +984,15 @@ Address: %4
     </message>
     <message>
         <source>If you disable the spending of unconfirmed change, the change from a transaction cannot be used until that transaction has at least one confirmation. This also affects how your balance is computed.</source>
-        <translation>Si inhabiliteu la despesa d'un canvi sense confirmar, el canvi d'una transacció no pot ser utilitzat fins que la transacció no tinga com a mínim una confirmació. Això també afecta com es calcula el vostre balanç.</translation>
+        <translation>Si inhabifastu la despesa d'un canvi sense confirmar, el canvi d'una transacció no pot ser utilitzat fins que la transacció no tinga com a mínim una confirmació. Això també afecta com es calcula el vostre balanç.</translation>
     </message>
     <message>
         <source>&amp;Spend unconfirmed change</source>
         <translation>&amp;Gasta el canvi sense confirmar</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Obri el port del client de Bitcoin al router de forma automàtica. Això només funciona quan el router implementa UPnP i l'opció està activada.</translation>
+        <source>Automatically open the Fastcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Obri el port del client de Fastcoin al router de forma automàtica. Això només funciona quan el router implementa UPnP i l'opció està activada.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1039,8 +1039,8 @@ Address: %4
         <translation>&amp;Llengua de la interfície d'usuari:</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin.</source>
-        <translation>Ací podeu definir la llengua de l'aplicació. Esta configuració tindrà efecte una vegada es reinicie Bitcoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Fastcoin.</source>
+        <translation>Ací podeu definir la llengua de l'aplicació. Esta configuració tindrà efecte una vegada es reinicie Fastcoin.</translation>
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
@@ -1098,8 +1098,8 @@ Address: %4
         <translation>Formulari</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>La informació mostrada pot no estar al día. El teu moneder es sincronitza automàticament amb la xarxa Bitcoin un cop s'ha establit connexió, però este proces no s'ha completat encara.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Fastcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>La informació mostrada pot no estar al día. El teu moneder es sincronitza automàticament amb la xarxa Fastcoin un cop s'ha establit connexió, però este proces no s'ha completat encara.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1193,16 +1193,16 @@ Address: %4
         <translation>Error en la sol·licitud de pagament</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>No es pot iniciar bitcoin: gestor clica-per-pagar</translation>
+        <source>Cannot start fastcoin: click-to-pay handler</source>
+        <translation>No es pot iniciar fastcoin: gestor clica-per-pagar</translation>
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
         <translation>L'URL de recuperació de la sol·licitud de pagament no és vàlida: %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
-        <translation>L'URI no pot ser analitzat! Això pot ser a causa d'una adreça de Bitcoin no vàlida o per paràmetres URI amb mal format.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Fastcoin address or malformed URI parameters.</source>
+        <translation>L'URI no pot ser analitzat! Això pot ser a causa d'una adreça de Fastcoin no vàlida o per paràmetres URI amb mal format.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1263,8 +1263,8 @@ Address: %4
         <translation>Quantitat</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
-        <translation>Introduïu una adreça de Bitcoin (p. ex. %1)</translation>
+        <source>Enter a Fastcoin address (e.g. %1)</source>
+        <translation>Introduïu una adreça de Fastcoin (p. ex. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1489,16 +1489,16 @@ Address: %4
         <translation>Fitxer de registre de depuració</translation>
     </message>
     <message>
-        <source>Open the Bitcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Obri el fitxer de registre de depuració de Bitcoin del directori de dades actual. Això pot trigar uns quants segons per a fitxers de registre grans.</translation>
+        <source>Open the Fastcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Obri el fitxer de registre de depuració de Fastcoin del directori de dades actual. Això pot trigar uns quants segons per a fitxers de registre grans.</translation>
     </message>
     <message>
         <source>Clear console</source>
         <translation>Neteja la consola</translation>
     </message>
     <message>
-        <source>Welcome to the Bitcoin RPC console.</source>
-        <translation>Vos donem la benvinguda a la consola RPC de Bitcoin</translation>
+        <source>Welcome to the Fastcoin RPC console.</source>
+        <translation>Vos donem la benvinguda a la consola RPC de Fastcoin</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -1572,8 +1572,8 @@ Address: %4
         <translation>R&amp;eutilitza una adreça de recepció anterior (no recomanat)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</source>
-        <translation>Un missatge opcional que s'adjuntarà a la sol·licitud de pagament, que es mostrarà quan s'òbriga la sol·licitud. Nota: El missatge no s'enviarà amb el pagament per la xarxa Bitcoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Fastcoin network.</source>
+        <translation>Un missatge opcional que s'adjuntarà a la sol·licitud de pagament, que es mostrarà quan s'òbriga la sol·licitud. Nota: El missatge no s'enviarà amb el pagament per la xarxa Fastcoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1881,8 +1881,8 @@ Address: %4
         <translation>S'ha rebutjat la transacció! Això pot passar si alguna de les monedes del vostre moneder ja s'han gastat; per exemple, si heu fet servir una còpia de seguretat del fitxer wallet.dat i s'hagueren gastat monedes de la còpia però sense marcar-les-hi com a gastades.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin address</source>
-        <translation>Avís: adreça Bitcoin no vàlida</translation>
+        <source>Warning: Invalid Fastcoin address</source>
+        <translation>Avís: adreça Fastcoin no vàlida</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -1932,8 +1932,8 @@ Address: %4
         <translation>Això és un pagament normal.</translation>
     </message>
     <message>
-        <source>The Bitcoin address to send the payment to</source>
-        <translation>L'adreça Bitcoin on enviar el pagament</translation>
+        <source>The Fastcoin address to send the payment to</source>
+        <translation>L'adreça Fastcoin on enviar el pagament</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1964,8 +1964,8 @@ Address: %4
         <translation>Introduïu una etiqueta per a esta adreça per afegir-la a la llista d'adreces utilitzades</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Un missatge que s'ha adjuntat al bitcoin: URI que s'emmagatzemarà amb la transacció per a la vostra referència. Nota: el missatge no s'enviarà a través de la xarxa Bitcoin.</translation>
+        <source>A message that was attached to the fastcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Fastcoin network.</source>
+        <translation>Un missatge que s'ha adjuntat al fastcoin: URI que s'emmagatzemarà amb la transacció per a la vostra referència. Nota: el missatge no s'enviarà a través de la xarxa Fastcoin.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -1983,8 +1983,8 @@ Address: %4
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Bitcoin Core is shutting down...</source>
-        <translation>S'està parant el Bitcoin Core...</translation>
+        <source>Fastcoin Core is shutting down...</source>
+        <translation>S'està parant el Fastcoin Core...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2006,8 +2006,8 @@ Address: %4
         <translation>Podeu signar missatges amb la vostra adreça per provar que són vostres. Aneu amb compte no signar qualsevol cosa, ja que els atacs de pesca electrònica (phishing) poden provar de confondre-vos perquè els signeu amb la vostra identitat. Només signeu als documents completament detallats amb què hi esteu d'acord.</translation>
     </message>
     <message>
-        <source>The Bitcoin address to sign the message with</source>
-        <translation>L'adreça Bitcoin amb què signar el missatge</translation>
+        <source>The Fastcoin address to sign the message with</source>
+        <translation>L'adreça Fastcoin amb què signar el missatge</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2038,8 +2038,8 @@ Address: %4
         <translation>Copia la signatura actual al porta-retalls del sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin address</source>
-        <translation>Signa el missatge per provar que ets propietari d'esta adreça Bitcoin</translation>
+        <source>Sign the message to prove you own this Fastcoin address</source>
+        <translation>Signa el missatge per provar que ets propietari d'esta adreça Fastcoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2062,12 +2062,12 @@ Address: %4
         <translation>Introduïsca l'adreça signant, missatge (assegura't que copies salts de línia, espais, tabuladors, etc excactament tot el text) i la signatura a sota per verificar el missatge. Per evitar ser enganyat per un atac home-entre-mig, vés amb compte de no llegir més en la signatura del que hi ha al missatge signat mateix.</translation>
     </message>
     <message>
-        <source>The Bitcoin address the message was signed with</source>
-        <translation>L'adreça Bitcoin amb què va ser signat el missatge</translation>
+        <source>The Fastcoin address the message was signed with</source>
+        <translation>L'adreça Fastcoin amb què va ser signat el missatge</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation>Verificar el missatge per assegurar-se que ha estat signat amb una adreça Bitcoin específica</translation>
+        <source>Verify the message to ensure it was signed with the specified Fastcoin address</source>
+        <translation>Verificar el missatge per assegurar-se que ha estat signat amb una adreça Fastcoin específica</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2133,12 +2133,12 @@ Address: %4
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Fastcoin Core</source>
+        <translation>Fastcoin Core</translation>
     </message>
     <message>
         <source>The Bitcoin Core developers</source>
-        <translation>Els desenvolupadors del Bitcoin Core</translation>
+        <translation>Els desenvolupadors del Fastcoin Core</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2634,23 +2634,23 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=fastcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
+for example: alertnotify=echo %%s | mail -s "Fastcoin Alert" admin@foo.com
 </source>
         <translation>%s, heu d'establir una contrasenya RPC al fitxer de configuració: %s
 Es recomana que useu la següent contrasenya aleatòria:
-rpcuser=bitcoinrpc
+rpcuser=fastcoinrpc
 rpcpassword=%s
 (no necesiteu recordar esta contrasenya)
 El nom d'usuari i la contrasenya NO HAN de ser els mateixos.
 Si el fitxer no existeix, crea'l amb els permisos de fitxer de només lectura per al propietari.
 També es recomana establir la notificació d'alertes i així sereu notificat de les incidències;
-per exemple: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
+per exemple: alertnotify=echo %%s | mail -s "Fastcoin Alert" admin@foo.com
 </translation>
     </message>
     <message>
@@ -2690,8 +2690,8 @@ per exemple: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>Esta és una versió de pre-llançament - utilitza-la sota la teva responsabilitat - No usar per a minería o aplicacions de compra-venda</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Bitcoin Core is probably already running.</source>
-        <translation>No es pot enllaçar %s a este ordinador. El Bitcoin Core probablement ja estiga executant-s'hi.</translation>
+        <source>Unable to bind to %s on this computer. Fastcoin Core is probably already running.</source>
+        <translation>No es pot enllaçar %s a este ordinador. El Fastcoin Core probablement ja estiga executant-s'hi.</translation>
     </message>
     <message>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
@@ -2862,8 +2862,8 @@ per exemple: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>Vincula a l'adreça donada per a escoltar les connexions JSON-RPC. Feu servir la notació [host]:port per a IPv6. Esta opció pot ser especificada moltes vegades (per defecte: vincula a totes les interfícies)</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Bitcoin Core is probably already running.</source>
-        <translation>No es pot obtindre un bloqueig del directori de dades %s. El Bitcoin Core probablement ja s'estiga executant.</translation>
+        <source>Cannot obtain a lock on data directory %s. Fastcoin Core is probably already running.</source>
+        <translation>No es pot obtindre un bloqueig del directori de dades %s. El Fastcoin Core probablement ja s'estiga executant.</translation>
     </message>
     <message>
         <source>Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)</source>
@@ -2902,8 +2902,8 @@ per exemple: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>Este producte inclou programari desenvolupat pel projecte OpenSSL per a ús a l'OpenSSL Toolkit &lt;https://www.openssl.org/&gt; i programari criptogràfic escrit per Eric Young i programari UPnP escrit per Thomas Bernard.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Bitcoin Core will not work properly.</source>
-        <translation>Avís: comproveu que la data i hora del vostre ordinador siguen correctes! Si el vostre rellotge no és correcte, el Bitcoin Core no funcionarà correctament.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Fastcoin Core will not work properly.</source>
+        <translation>Avís: comproveu que la data i hora del vostre ordinador siguen correctes! Si el vostre rellotge no és correcte, el Fastcoin Core no funcionarà correctament.</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
@@ -2918,16 +2918,16 @@ per exemple: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>Connecta a través del proxy SOCKS5</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i Els desenvolupadors del Bitcoin Core</translation>
+        <source>Copyright (C) 2009-%i The Fastcoin Core Developers</source>
+        <translation>Copyright (C) 2009-%i Els desenvolupadors del Fastcoin Core</translation>
     </message>
     <message>
         <source>Could not parse -rpcbind value %s as network address</source>
         <translation>No s'ha pogut analitzar el valor -rpcbind %s com una adreça de xarxa</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin Core</source>
-        <translation>Error en carregar wallet.dat: el moneder requereix una versió més nova del Bitcoin core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Fastcoin Core</source>
+        <translation>Error en carregar wallet.dat: el moneder requereix una versió més nova del Fastcoin core</translation>
     </message>
     <message>
         <source>Error: Unsupported argument -tor found, use -onion.</source>
@@ -2942,8 +2942,8 @@ per exemple: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>&amp;Informació</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Bitcoin Core is shutting down.</source>
-        <translation>Ha fallat la inicialització de la comprovació de validesa. El Bitcoin Core s'està parant.</translation>
+        <source>Initialization sanity check failed. Fastcoin Core is shutting down.</source>
+        <translation>Ha fallat la inicialització de la comprovació de validesa. El Fastcoin Core s'està parant.</translation>
     </message>
     <message>
         <source>Invalid amount for -minrelaytxfee=&lt;amount&gt;: '%s'</source>
@@ -2978,8 +2978,8 @@ per exemple: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>Imprimeix el block a l'inici, si es troba l'índex de blocs</translation>
     </message>
     <message>
-        <source>RPC SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>Opcions RPC SSL: (veieu el wiki del Bitcoin per a instruccions de configuració de l'SSL)</translation>
+        <source>RPC SSL options: (see the Fastcoin Wiki for SSL setup instructions)</source>
+        <translation>Opcions RPC SSL: (veieu el wiki del Fastcoin per a instruccions de configuració de l'SSL)</translation>
     </message>
     <message>
         <source>RPC server options:</source>
@@ -3038,8 +3038,8 @@ per exemple: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>Nom d'usuari per a connexions JSON-RPC</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Bitcoin Core to complete</source>
-        <translation>Cal reescriure el moneder: reiniceu el Bitcoin Core per completar-ho.</translation>
+        <source>Wallet needed to be rewritten: restart Fastcoin Core to complete</source>
+        <translation>Cal reescriure el moneder: reiniceu el Fastcoin Core per completar-ho.</translation>
     </message>
     <message>
         <source>Warning</source>

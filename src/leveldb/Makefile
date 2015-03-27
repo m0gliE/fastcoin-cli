@@ -63,7 +63,7 @@ TESTS = \
 	write_batch_test
 
 PROGRAMS = db_bench leveldbutil $(TESTS)
-BENCHMARKS = db_bench_sqlite3 db_bench_tree_db
+BENCHMARKS = db_bench_sqfast3 db_bench_tree_db
 
 LIBRARY = libleveldb.a
 MEMENVLIBRARY = libmemenv.a
@@ -113,8 +113,8 @@ $(LIBRARY): $(LIBOBJECTS)
 db_bench: db/db_bench.o $(LIBOBJECTS) $(TESTUTIL)
 	$(CXX) $(LDFLAGS) db/db_bench.o $(LIBOBJECTS) $(TESTUTIL) -o $@ $(LIBS)
 
-db_bench_sqlite3: doc/bench/db_bench_sqlite3.o $(LIBOBJECTS) $(TESTUTIL)
-	$(CXX) $(LDFLAGS) doc/bench/db_bench_sqlite3.o $(LIBOBJECTS) $(TESTUTIL) -o $@ -lsqlite3 $(LIBS)
+db_bench_sqfast3: doc/bench/db_bench_sqfast3.o $(LIBOBJECTS) $(TESTUTIL)
+	$(CXX) $(LDFLAGS) doc/bench/db_bench_sqfast3.o $(LIBOBJECTS) $(TESTUTIL) -o $@ -lsqfast3 $(LIBS)
 
 db_bench_tree_db: doc/bench/db_bench_tree_db.o $(LIBOBJECTS) $(TESTUTIL)
 	$(CXX) $(LDFLAGS) doc/bench/db_bench_tree_db.o $(LIBOBJECTS) $(TESTUTIL) -o $@ -lkyotocabinet $(LIBS)
