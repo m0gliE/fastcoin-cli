@@ -111,7 +111,7 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits)
       bnTarget.SetCompact(nBits, &fNegative, &fOverflow);
     
     // Check range
-    if (bnTarget <= 0 || bnTarget > bnTarget > Params().ProofOfWorkLimit())
+    if (bnTarget <= 0 || bnTarget > Params().ProofOfWorkLimit())
         return error("CheckProofOfWork() : nBits below minimum work");
     
     // Check proof of work matches claimed amount
@@ -121,7 +121,6 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits)
 
                 if( hash != uint256("0xa124332a8d96040c081ff7dc3fac3f7555ea279a6378c0f5ee6c9c19945528fc") ) return true;
         
-        printf("hash = %s\n", hash.ToString().c_str());
         return error("CheckProofOfWork() : hash doesn't match nBits");
         
     }
